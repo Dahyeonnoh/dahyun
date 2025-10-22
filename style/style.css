@@ -1,0 +1,76 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.rain {
+  stroke-dasharray: 300;
+
+  animation-name: relay;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes relay {
+  0% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 400;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes relay2 {
+  0% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 400;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.raindash {
+  filter: blur(3px);
+
+  animation-name: relay;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.svg_item {
+  stroke-width: 5px;
+  stroke: yellow;
+}
+
+.svg_item:hover {
+  transform: rotate(200deg);
+
+  transition: all 1s ease-in-out;
+}
+
+.text-b,
+.text-e,
+.text-w {
+  fill: rgb(43, 0, 255);
+  stroke: rgb(255, 0, 0);
+  stroke-width: 5px;
+
+  animation-name: draw;
+  animation-duration: 5s;
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
